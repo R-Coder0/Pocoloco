@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font definition */
+@font-face {
+    font-family: 'Fontdinerdotcom Huggable';
+    src: url('./assets/Fonts/FontdinerdotcomHuggable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Baby Gemoy';
+    src: url('./assets/Fonts/BabyGemoy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+@font-face {
+  font-family: 'Xiaomi';
+  src: url('./assets/Fonts/Xiaomi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Absortile-Bold';
+  src: url('./assets/Fonts/Absortile-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Tailwind custom utility class */
+@layer utilities {
+  .text-fontdinerdotcom {
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: 'Fontdinerdotcom Huggable', serif;
+  }
+}
+.gallery-image {
+  border: 5px solid #fbbf24;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
